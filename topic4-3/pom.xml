@@ -69,7 +69,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>topi4-3</finalName>
+		<finalName>topic4-3</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
