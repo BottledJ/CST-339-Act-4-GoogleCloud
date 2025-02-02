@@ -75,7 +75,7 @@ public class OrderDataService implements DataAccessInterface<OrderEntity>
 	{
 		// Example of "overriding" the CrudRepository save() because it simply is never called
 		// You can inject a dataSource and use the jdbcTemplate to provide a customized implementation of a save() method
-		String sql = "INSERT INTO ORDERS(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
+		String sql = "INSERT INTO orders(ORDER_NO, PRODUCT_NAME, PRICE, QUANTITY) VALUES(?, ?, ?, ?)";
 		try 
 		{
 			// Execute SQL Insert
