@@ -17,6 +17,23 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<!-- For Google App Engine to be added under depenencies -->
+		<dependency>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>mysql-socket-factory-connector-j-8</artifactId>
+			<version>1.18.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client</artifactId>
+			<version>1.31.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client-appengine</artifactId>
+			<version>1.21.0</version>
+		</dependency>
+		<!-- -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -71,6 +88,16 @@
 	<build>
 		<finalName>topic4-3</finalName>
 		<plugins>
+			<!-- For Google App Engine to be added under plugins tag -->
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.7.0</version>
+				<configuration>
+					<version>1</version>
+					<projectId>GCLOUD_CONFIG</projectId>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
